@@ -15,7 +15,8 @@ PlatformException _createConnectionError(String channelName) {
   );
 }
 
-List<Object?> wrapResponse({Object? result, PlatformException? error, bool empty = false}) {
+List<Object?> wrapResponse(
+    {Object? result, PlatformException? error, bool empty = false}) {
   if (empty) {
     return <Object?>[];
   }
@@ -33,12 +34,15 @@ class ScreenShotCallbackHostApi {
       : __pigeon_binaryMessenger = binaryMessenger;
   final BinaryMessenger? __pigeon_binaryMessenger;
 
-  static const MessageCodec<Object?> pigeonChannelCodec = StandardMessageCodec();
+  static const MessageCodec<Object?> pigeonChannelCodec =
+      StandardMessageCodec();
 
   /// 初始化
   Future<void> initialize() async {
-    const String __pigeon_channelName = 'dev.flutter.pigeon.screenshot_callback_pro.ScreenShotCallbackHostApi.initialize';
-    final BasicMessageChannel<Object?> __pigeon_channel = BasicMessageChannel<Object?>(
+    const String __pigeon_channelName =
+        'dev.flutter.pigeon.screenshot_callback_pro.ScreenShotCallbackHostApi.initialize';
+    final BasicMessageChannel<Object?> __pigeon_channel =
+        BasicMessageChannel<Object?>(
       __pigeon_channelName,
       pigeonChannelCodec,
       binaryMessenger: __pigeon_binaryMessenger,
@@ -60,8 +64,10 @@ class ScreenShotCallbackHostApi {
 
   /// 销毁
   Future<void> dispose() async {
-    const String __pigeon_channelName = 'dev.flutter.pigeon.screenshot_callback_pro.ScreenShotCallbackHostApi.dispose';
-    final BasicMessageChannel<Object?> __pigeon_channel = BasicMessageChannel<Object?>(
+    const String __pigeon_channelName =
+        'dev.flutter.pigeon.screenshot_callback_pro.ScreenShotCallbackHostApi.dispose';
+    final BasicMessageChannel<Object?> __pigeon_channel =
+        BasicMessageChannel<Object?>(
       __pigeon_channelName,
       pigeonChannelCodec,
       binaryMessenger: __pigeon_binaryMessenger,
@@ -83,15 +89,19 @@ class ScreenShotCallbackHostApi {
 }
 
 abstract class ScreenShotCallbackFlutterApi {
-  static const MessageCodec<Object?> pigeonChannelCodec = StandardMessageCodec();
+  static const MessageCodec<Object?> pigeonChannelCodec =
+      StandardMessageCodec();
 
   /// 截图回调
   void screenShotCallback();
 
-  static void setup(ScreenShotCallbackFlutterApi? api, {BinaryMessenger? binaryMessenger}) {
+  static void setup(ScreenShotCallbackFlutterApi? api,
+      {BinaryMessenger? binaryMessenger}) {
     {
-      final BasicMessageChannel<Object?> __pigeon_channel = BasicMessageChannel<Object?>(
-          'dev.flutter.pigeon.screenshot_callback_pro.ScreenShotCallbackFlutterApi.screenShotCallback', pigeonChannelCodec,
+      final BasicMessageChannel<Object?> __pigeon_channel = BasicMessageChannel<
+              Object?>(
+          'dev.flutter.pigeon.screenshot_callback_pro.ScreenShotCallbackFlutterApi.screenShotCallback',
+          pigeonChannelCodec,
           binaryMessenger: binaryMessenger);
       if (api == null) {
         __pigeon_channel.setMessageHandler(null);
@@ -102,8 +112,9 @@ abstract class ScreenShotCallbackFlutterApi {
             return wrapResponse(empty: true);
           } on PlatformException catch (e) {
             return wrapResponse(error: e);
-          }          catch (e) {
-            return wrapResponse(error: PlatformException(code: 'error', message: e.toString()));
+          } catch (e) {
+            return wrapResponse(
+                error: PlatformException(code: 'error', message: e.toString()));
           }
         });
       }
