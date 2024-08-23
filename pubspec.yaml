@@ -1,0 +1,27 @@
+name: screenshot_callback_pro
+description: screenshot_callback_pro
+version: 0.0.1
+homepage: https://github.com/LiuDongCai/screenshot_callback_pro
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  pigeon: ^17.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.liudongcai.screenshot_callback_pro
+        pluginClass: ScreenshotCallbackPlugin
+      ios:
+        pluginClass: ScreenshotCallbackPlugin
