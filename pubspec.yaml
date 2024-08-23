@@ -1,11 +1,10 @@
 name: screenshot_callback_pro
 description: screenshot_callback_pro,No permission required, just call back directly.This library is very user-friendly.
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/LiuDongCai/screenshot_callback_pro
 
 environment:
-  sdk: '>=3.4.4 <4.0.0'
-  flutter: ">=3.10.0"
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
