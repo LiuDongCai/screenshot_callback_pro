@@ -1,6 +1,6 @@
 ## 0.0.5
 
-update flutter environment '>=3.0.0 <4.0.0'
+update flutter environment
 
 ## 0.0.4
 
