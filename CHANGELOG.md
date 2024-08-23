@@ -1,6 +1,10 @@
+## 0.0.4
+
+remove Android name
+
 ## 0.0.3
 
-remove package
+remove Android package
 
 ## 0.0.2
 
